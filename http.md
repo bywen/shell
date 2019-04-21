@@ -11,7 +11,7 @@
 pgrep -l httpd或者ps -C httpd --no-heading检查进程
 for循环5次计数器
 参考答案
-
+```
 #!/bin/bash
 check_service()
 {
@@ -53,4 +53,5 @@ do
     fi
     sleep 10
 done
+```
 
