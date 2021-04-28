@@ -11,5 +11,5 @@ done
 
 cd $dir
 tar zcf /backup/send_file/zxz-$datetype.tar.gz /backup/db_sql/*
-/usr/bin/rsync -arvz /backup/send_file/zxz-$datetype.tar.gz wen@113.105.190.78::data/backup_mysql_zxz/ --password-file=/etc/rsync.password     
+/usr/bin/rsync -arvz /backup/send_file/zxz-$datetype.tar.gz wen@192.168.50.60::data/backup_mysql_zxz/ --password-file=/etc/rsync.password     
 exit
