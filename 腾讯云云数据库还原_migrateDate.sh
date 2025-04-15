@@ -82,18 +82,19 @@ scp -P 4728 -i /root/user/zxz $spath/user$today.tar.gz root@$ip:/usr/local/src/d
 echo '发送完成!!!'
 
 
+
 #创建数据库
 for d in ${databases[@]};do
   echo '创建数据库' $d
-  mysql -u root -p$passwd -e "create database  $d charset=utf8"
+  mysql -u root -p$passwdB-e "create database  $d charset=utf8"
 
   echo '还原数据库' $db
-  mysql -u root -p$passwd  $d < $dataPath/$d.sql
+  mysql -u root -p$passwdB  $d < $dataPath/$d.sql
 
 done
 #还原sql
 echo '创建用户名密码'
-mysql -uroot -p$passwd mysql -e "$(cat $dataPath/myUser.sql)"
+mysql -uroot -p$passwdB mysql -e "$(cat $dataPath/myUser.sql)"
 
 echo 'done'
 ~           
